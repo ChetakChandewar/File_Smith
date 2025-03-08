@@ -12,5 +12,12 @@
        -keep class org.slf4j.** { *; }
        -dontwarn org.slf4j.**
 
+       # Keep classes for Google ML Kit text recognition
+       -keep class com.google.mlkit.vision.text.** { *; }
+       -keep class com.google.mlkit.vision.text.chinese.** { *; }
+       -keep class com.google.mlkit.vision.text.devanagari.** { *; }
+       -keep class com.google.mlkit.vision.text.japanese.** { *; }
+       -keep class com.google.mlkit.vision.text.korean.** { *; }
+
 
        # Remove rules for unused libraries (like Gson, Retrofit, Firebase) if not in us

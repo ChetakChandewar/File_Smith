@@ -2,6 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
 }
 
 def localProperties = new Properties()
@@ -26,7 +27,7 @@ android {
     namespace = "com.example.file_smith"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
-    ndkVersion = "25.1.8937393"
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -42,6 +43,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -50,6 +52,18 @@ android {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
         }
     }
 }
@@ -62,4 +76,18 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.36' // Use the latest stable version
     implementation 'org.slf4j:slf4j-simple:1.7.32' // Optional for logging output in simple form
     implementation 'com.google.android.play:core-ktx:1.8.1' // Or the latest available version
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.mlkit:text-recognition:16.0.1'
+
+
+    // Exclude unused language-specific recognizers
+    implementation("com.google.mlkit:text-recognition-chinese:16.0.1") { exclude module: "com.google.mlkit.vision.text.chinese" }
+    implementation("com.google.mlkit:text-recognition-devanagari:16.0.1") { exclude module: "com.google.mlkit.vision.text.devanagari" }
+    implementation("com.google.mlkit:text-recognition-japanese:16.0.1") { exclude module: "com.google.mlkit.vision.text.japanese" }
+    implementation("com.google.mlkit:text-recognition-korean:16.0.1") { exclude module: "com.google.mlkit.vision.text.korean" }
+//    implementation 'com.google.mlkit:text-recognition-chinese:16.0.1'
+//    implementation 'com.google.mlkit:text-recognition-devanagari:16.0.1'
+//    implementation 'com.google.mlkit:text-recognition-japanese:16.0.1'
+//    implementation 'com.google.mlkit:text-recognition-korean:16.0.1'
 }

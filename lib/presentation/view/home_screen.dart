@@ -38,9 +38,10 @@ class HomeScreen extends StatelessWidget {
               _buildFeatureBlock(context, 'PDF Merge', Icons.merge_type, '/pdfMerge'),
               _buildFeatureBlock(context, 'PDF to XLS', Icons.table_chart, '/pdfToXls'),
               _buildFeatureBlock(context, 'XLS to PDF', Icons.picture_as_pdf, '/xlsToPdf'),
-              _buildFeatureBlock(context, 'Doc to PDF', Icons.article, '/docToPdf'),
+              _buildFeatureBlock(context, 'Doc to PDF', Icons.article, '/docsToPdf'),
               _buildFeatureBlock(context, 'PPT to PDF', Icons.slideshow, '/pptToPdf'),
               _buildFeatureBlock(context, 'PDF to PPT', Icons.picture_as_pdf, '/pdfToPpt'),
+              _buildFeatureBlock(context, 'AI Tools', Icons.smart_toy, '/aiTools'), // New AI Tools block
             ],
           );
         },

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394916065053",
+    "project_id": "file-smith-cb0b6",
+    "storage_bucket": "file-smith-cb0b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394916065053:android:5eb82d3d286acfaf007bf4",
+        "android_client_info": {
+          "package_name": "com.example.file_smith"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK_VKZmH9X_Io8T1fhNQboZ-Dq2p8VwfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
