@@ -8,6 +8,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   file_saver
   file_selector_windows
   firebase_core
+  flutter_inappwebview_windows
   flutter_tts
   pdfx
   permission_handler_windows

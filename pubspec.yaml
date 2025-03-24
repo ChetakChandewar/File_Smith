@@ -56,6 +56,10 @@ dependencies:
   firebase_core: ^3.10.0
   cloud_firestore: ^5.6.1
 
+  google_sign_in: ^6.1.5
+  googleapis: ^11.4.0
+  googleapis_auth: ^1.4.0
+
 
 
   #pdf:
@@ -93,6 +97,19 @@ dependencies:
   google_mlkit_text_recognition: ^0.14.0
   fluttertoast: ^8.2.12
 
+
+  lottie: ^3.2.0
+  speech_to_text: ^7.0.0
+  web_socket_channel: ^3.0.2
+  #flutter_sound: ^8.3.1
+
+  youtube_player_flutter: ^9.1.1
+  xml: ^6.2.0
+  flutter_dotenv: ^5.0.2
+
+
+  dio: ^5.8.0
+  open_filex: ^4.7.0
 
 
 
